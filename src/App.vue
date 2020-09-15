@@ -2,7 +2,7 @@
 <center>
   <div id="app">
     <div class="message">{{ message }}</div>
-    <span class="time">{{ time }}</span>
+    <span class="time">{{ time }} {{ minsegs }}</span>
     <div class="buttons">
     <b-button variant="dark" @click="run(3)">3s</b-button>
     <b-button variant="dark" @click="run(60)">1m</b-button>
@@ -22,6 +22,7 @@ var interval;
       return {
         message: 'Cuenta regresiva',
         time: "00:00",
+        minsegs: "min/seg"
       };
     },
     methods: {
@@ -95,8 +96,9 @@ var interval;
 
   .time{
     font-family: 'Helvetica', sans-serif;
-    padding:10px;
     font-weight:bold;
+    padding-top:20px;
+    padding-bottom:20px;
   }
 
 </style>
